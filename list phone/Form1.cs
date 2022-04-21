@@ -50,7 +50,7 @@ namespace list_phone
             else
             {
                 toolStripStatusLabel1.ForeColor = Color.Red;
-                toolStripStatusLabel1.Text = "خطا : متن خالیست !!!";
+                toolStripStatusLabel1.Text = "Erorr:text note is empty!!!";
             }
         }
 
@@ -58,7 +58,7 @@ namespace list_phone
         {
             if(toolStripStatusLabel1.Text !="")
             {
-                toolStripStatusLabel1.Text = "همه چی درسته!!!";
+                toolStripStatusLabel1.Text = "Everything is correct !!!";
                 toolStripStatusLabel1.ForeColor = Color.Black;
             }
             

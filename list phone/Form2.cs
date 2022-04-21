@@ -12,7 +12,7 @@ namespace list_phone
 {
     public partial class Form2 : Form
     {
-        string path = "list.txt";
+        const string path = "list.txt";
         public Form2()
         {
             InitializeComponent();
