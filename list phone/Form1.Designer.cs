@@ -29,14 +29,20 @@ namespace list_phone
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,13 +57,39 @@ namespace list_phone
             // 
             // listBox1
             // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 72);
+            this.listBox1.Location = new System.Drawing.Point(12, 74);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listBox1.Size = new System.Drawing.Size(241, 289);
             this.listBox1.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editeToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // editeToolStripMenuItem
+            // 
+            this.editeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editeToolStripMenuItem.Image")));
+            this.editeToolStripMenuItem.Name = "editeToolStripMenuItem";
+            this.editeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editeToolStripMenuItem.Text = "Edit";
+            this.editeToolStripMenuItem.Click += new System.EventHandler(this.editeToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -76,7 +108,7 @@ namespace list_phone
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 396);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(263, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(260, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -126,7 +158,7 @@ namespace list_phone
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 418);
+            this.ClientSize = new System.Drawing.Size(260, 418);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -140,6 +172,7 @@ namespace list_phone
             this.Name = "Form1";
             this.Text = "List Note&printer Switcher";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -157,6 +190,9 @@ namespace list_phone
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editeToolStripMenuItem;
     }
 }
 
